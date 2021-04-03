@@ -1,0 +1,18 @@
+{
+    "name": "xenonmc/xpframe",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "XENONMC",
+            "email": "support@xenonmc.xyz"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "XENONMC\\XPFRAME\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "require": {}
+}
