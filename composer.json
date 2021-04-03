@@ -8,6 +8,12 @@
             "email": "support@xenonmc.xyz"
         }
     ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/XENONMC-DEV/XPFRAME" 
+        }
+    ],
     "autoload": {
         "psr-4": {
             "XENONMC\\XPFRAME\\": "src/"
