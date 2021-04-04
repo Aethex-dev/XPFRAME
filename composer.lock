@@ -4,8 +4,48 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fd89a772aad1e55c5e7fd9b132d18913",
+    "content-hash": "92f21f78d26b1ed09ccce9d96a3eaf1f",
     "packages": [
+        {
+            "name": "xenonmc/xpframe-errors",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/XENONMC-DEV/XPFRAME-ERRORS.git",
+                "reference": "bc07506f6bb5e61aed2a95de878d46a6c46ba41c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/XENONMC-DEV/XPFRAME-ERRORS/zipball/bc07506f6bb5e61aed2a95de878d46a6c46ba41c",
+                "reference": "bc07506f6bb5e61aed2a95de878d46a6c46ba41c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.0.0"
+            },
+            "default-branch": true,
+            "type": "package",
+            "autoload": {
+                "psr-4": {
+                    "XENONMC\\XPFRAME\\Errors\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "XENONMC",
+                    "email": "support@xenonmc.xyz"
+                }
+            ],
+            "support": {
+                "issues": "https://github.com/XENONMC-DEV/XPFRAME-ERRORS/issues",
+                "source": "https://github.com/XENONMC-DEV/XPFRAME-ERRORS/tree/main"
+            },
+            "time": "2021-04-04T19:47:06+00:00"
+        },
         {
             "name": "xenonmc/xpframe-router",
             "version": "dev-main",
@@ -93,6 +133,7 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "xenonmc/xpframe-router": 20,
+        "xenonmc/xpframe-errors": 20,
         "xenonmc/xpframe-mvc": 20
     },
     "prefer-stable": false,

@@ -15,6 +15,7 @@ class App {
     {
         
         $this->mvc = $mvc;
+        $mvc->view->cache('Default', 'contact.html');
     }
 
     /**

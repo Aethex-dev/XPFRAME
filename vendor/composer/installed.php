@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => 'f5f628c44713f0eac68d40ff0ef243e32f124fc9',
+    'reference' => '6f77b05a27cd00bc039e9834e16ba706df8a11e0',
     'name' => 'xenonmc/xpframe',
   ),
   'versions' => 
@@ -18,7 +18,17 @@
       'aliases' => 
       array (
       ),
-      'reference' => 'f5f628c44713f0eac68d40ff0ef243e32f124fc9',
+      'reference' => '6f77b05a27cd00bc039e9834e16ba706df8a11e0',
+    ),
+    'xenonmc/xpframe-errors' => 
+    array (
+      'pretty_version' => 'dev-main',
+      'version' => 'dev-main',
+      'aliases' => 
+      array (
+        0 => '9999999-dev',
+      ),
+      'reference' => 'bc07506f6bb5e61aed2a95de878d46a6c46ba41c',
     ),
     'xenonmc/xpframe-mvc' => 
     array (

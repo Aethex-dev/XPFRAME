@@ -14,6 +14,6 @@ class Test
     function onReady()
     {
 
-        echo 'lol';
+        
     }
 }

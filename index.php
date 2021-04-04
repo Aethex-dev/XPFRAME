@@ -3,6 +3,8 @@ namespace XENONMC\XPFRAME;
 
 include 'vendor/autoload.php';
 
+$e = new Errors\App();
+
 $t = new Router\App();
 
 // url handler

@@ -21,7 +21,8 @@
     },
     "minimum-stability": "dev",
     "require": {
-        "xenonmc/xpframe-router": "dev-main"
+        "xenonmc/xpframe-router": "dev-main",
+        "xenonmc/xpframe-errors": "dev-main"
     },
     "require-dev": {
         "xenonmc/xpframe-mvc": "dev-main"
