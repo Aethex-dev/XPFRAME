@@ -19,6 +19,11 @@
             "XENONMC\\XPFRAME\\": "src/"
         }
     },
-    "minimum-stability": "stable",
-    "require": {}
+    "minimum-stability": "dev",
+    "require": {
+        "xenonmc/xpframe-router": "dev-main"
+    },
+    "require-dev": {
+        "xenonmc/xpframe-mvc": "dev-main"
+    }
 }

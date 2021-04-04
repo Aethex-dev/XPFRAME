@@ -1,0 +1,103 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "fd89a772aad1e55c5e7fd9b132d18913",
+    "packages": [
+        {
+            "name": "xenonmc/xpframe-router",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/XENONMC-DEV/XPFRAME-ROUTER.git",
+                "reference": "12315c87b4f99c91e6dc453429f4b9cf555277a9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/XENONMC-DEV/XPFRAME-ROUTER/zipball/12315c87b4f99c91e6dc453429f4b9cf555277a9",
+                "reference": "12315c87b4f99c91e6dc453429f4b9cf555277a9",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.0.0"
+            },
+            "default-branch": true,
+            "type": "package",
+            "autoload": {
+                "psr-4": {
+                    "XENONMC\\XPFRAME\\Router\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "XENONMC",
+                    "email": "support@xenonmc.xyz"
+                }
+            ],
+            "support": {
+                "issues": "https://github.com/XENONMC-DEV/XPFRAME-ROUTER/issues",
+                "source": "https://github.com/XENONMC-DEV/XPFRAME-ROUTER/tree/main"
+            },
+            "time": "2021-04-03T21:41:50+00:00"
+        }
+    ],
+    "packages-dev": [
+        {
+            "name": "xenonmc/xpframe-mvc",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/XENONMC-DEV/XPFRAME-MVC.git",
+                "reference": "6cb3706d98eb4c3dba4539de6dcfcc8c68b8680b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/XENONMC-DEV/XPFRAME-MVC/zipball/6cb3706d98eb4c3dba4539de6dcfcc8c68b8680b",
+                "reference": "6cb3706d98eb4c3dba4539de6dcfcc8c68b8680b",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.0.0"
+            },
+            "default-branch": true,
+            "type": "package",
+            "autoload": {
+                "psr-4": {
+                    "XENONMC\\XPFRAME\\Mvc\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "XENONMC",
+                    "email": "support@xenonmc.xyz"
+                }
+            ],
+            "support": {
+                "issues": "https://github.com/XENONMC-DEV/XPFRAME-MVC/issues",
+                "source": "https://github.com/XENONMC-DEV/XPFRAME-MVC/tree/main"
+            },
+            "time": "2021-04-04T02:18:25+00:00"
+        }
+    ],
+    "aliases": [],
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "xenonmc/xpframe-router": 20,
+        "xenonmc/xpframe-mvc": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.0.0"
+}

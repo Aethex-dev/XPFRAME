@@ -1,0 +1,94 @@
+{
+    "packages": [
+        {
+            "name": "xenonmc/xpframe-mvc",
+            "version": "dev-main",
+            "version_normalized": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/XENONMC-DEV/XPFRAME-MVC.git",
+                "reference": "6cb3706d98eb4c3dba4539de6dcfcc8c68b8680b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/XENONMC-DEV/XPFRAME-MVC/zipball/6cb3706d98eb4c3dba4539de6dcfcc8c68b8680b",
+                "reference": "6cb3706d98eb4c3dba4539de6dcfcc8c68b8680b",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.0.0"
+            },
+            "time": "2021-04-04T02:18:25+00:00",
+            "default-branch": true,
+            "type": "package",
+            "installation-source": "source",
+            "autoload": {
+                "psr-4": {
+                    "XENONMC\\XPFRAME\\Mvc\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "XENONMC",
+                    "email": "support@xenonmc.xyz"
+                }
+            ],
+            "support": {
+                "issues": "https://github.com/XENONMC-DEV/XPFRAME-MVC/issues",
+                "source": "https://github.com/XENONMC-DEV/XPFRAME-MVC/tree/main"
+            },
+            "install-path": "../../../XPFRAME/vendor/xenonmc/xpframe-mvc"
+        },
+        {
+            "name": "xenonmc/xpframe-router",
+            "version": "dev-main",
+            "version_normalized": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/XENONMC-DEV/XPFRAME-ROUTER.git",
+                "reference": "12315c87b4f99c91e6dc453429f4b9cf555277a9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/XENONMC-DEV/XPFRAME-ROUTER/zipball/12315c87b4f99c91e6dc453429f4b9cf555277a9",
+                "reference": "12315c87b4f99c91e6dc453429f4b9cf555277a9",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.0.0"
+            },
+            "time": "2021-04-03T21:41:50+00:00",
+            "default-branch": true,
+            "type": "package",
+            "installation-source": "source",
+            "autoload": {
+                "psr-4": {
+                    "XENONMC\\XPFRAME\\Router\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "XENONMC",
+                    "email": "support@xenonmc.xyz"
+                }
+            ],
+            "support": {
+                "issues": "https://github.com/XENONMC-DEV/XPFRAME-ROUTER/issues",
+                "source": "https://github.com/XENONMC-DEV/XPFRAME-ROUTER/tree/main"
+            },
+            "install-path": "../../../XPFRAME/vendor/xenonmc/xpframe-router"
+        }
+    ],
+    "dev": true,
+    "dev-package-names": [
+        "xenonmc/xpframe-mvc"
+    ]
+}
