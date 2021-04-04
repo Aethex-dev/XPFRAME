@@ -21,9 +21,16 @@ $t->get($t->url[0], function() use(&$t) {
         $mvc = new Mvc\App();
 
         // initialize app controller
+        $use_cntlr = null;
+
+        if (isset($t->url[1]) && strlen($t->url[1]) > 0) {
+
+            $use_cntlr = $t->url[1];
+        }
         $mvc->controller->init(array(
 
             'app' => $t->url[0],
+            'controller' => $use_cntlr
 
         ), function($cntlr) {
 
