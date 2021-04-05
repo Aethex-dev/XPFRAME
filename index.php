@@ -7,6 +7,7 @@ $e = new Errors\App();
 
 $t = new Router\App();
 
+
 // url handler
 $t->get('/', function() {
 
