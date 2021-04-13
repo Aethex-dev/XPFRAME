@@ -22,7 +22,10 @@
     "minimum-stability": "dev",
     "require": {
         "xenonmc/xpframe-router": "dev-main",
-        "xenonmc/xpframe-errors": "dev-main"
+        "xenonmc/xpframe-errors": "dev-main",
+        "influxdata/influxdb-client-php": "dev-master",
+        "doctrine/lexer": "1.2.x-dev",
+        "twig/twig": "3.x-dev"
     },
     "require-dev": {
         "xenonmc/xpframe-mvc": "dev-main"

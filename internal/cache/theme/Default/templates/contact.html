@@ -1,5 +1,14 @@
-<?php if (5 == 5) { // PHP if statement ?>
+ <?php $template_env_hello = 'hey world'; ?>
 
-lol
+ <?php echo $template_env_hello; ?>
 
-<?php } // PHP end if statement ?>
+ <br>
+ <br>
+
+<?php $template_env_hello = '5'; ?>
+
+ <?php if ($template_env_hello == 5) { ?>
+
+    5 == 5 beans
+
+ <?php } ?>

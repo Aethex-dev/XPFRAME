@@ -2,7 +2,8 @@
 
 namespace XENONMC\XPFRAME\apps\contact;
 
-class App {
+class App
+{
 
     /**
      * constructor
@@ -13,9 +14,9 @@ class App {
 
     function __construct($mvc)
     {
-        
+
         $this->mvc = $mvc;
-        $mvc->view->cache('Default', 'contact.html');
+        $mvc->view->cache('Default', 'contact');
     }
 
     /**
@@ -23,8 +24,11 @@ class App {
      * 
      */
 
-    function onReady() {
+    function onReady()
+    {
 
-        echo 'the contact app controller was loaded';
+        $this->mvc->view->render($this->mvc->view->theme, 'contact', 'main', [
+ 
+        ]);
     }
 }
