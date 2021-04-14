@@ -17,6 +17,7 @@ class App
 
         $this->mvc = $mvc;
         $mvc->view->cache('Default', 'contact');
+        $mvc->view->cache('Default', 'main', true);
     }
 
     /**
@@ -28,7 +29,12 @@ class App
     {
 
         $this->mvc->view->render($this->mvc->view->theme, 'contact', 'main', [
- 
+
+            'beans' => 'epic'
+        ],
+        [
+
+            'brand' => 'XPFRAME'
         ]);
     }
 }
