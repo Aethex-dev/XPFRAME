@@ -1,0 +1,7 @@
+use-cli: true
+cli-auto-prefix: false
+mvc:
+ contruct:
+  - Model
+  - View
+  - Controller
