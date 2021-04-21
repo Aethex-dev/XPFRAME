@@ -12,7 +12,8 @@
     "minimum-stability": "dev",
     "require": {
         "symfony/yaml": "5.x-dev",
-        "xenonmc/xpframe-router": "dev-main"
+        "xenonmc/xpframe-router": "dev-main",
+        "xenonmc/xpframe-mvc": "dev-main"
     },
     "autoload": {
         "psr-4": {

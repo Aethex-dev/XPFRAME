@@ -29,6 +29,7 @@ include SRC . "/vendor/autoload.php";
 // class imports
 use \XENONMC\XPFRAME\ext\Config;
 use \XENONMC\XPFRAME\cli\CLI;
+use XENONMC\XPFRAME\Mvc\Mvc;
 use XENONMC\XPFRAME\Router\Router;
 
 class App
@@ -103,9 +104,15 @@ class App
                 // initialize cli class
                 new CLI($this);
 
+                // stop function
                 return null;
             }
+
+            // stop function
+            return null;
         }
+
+        $mvc = new Mvc();
     }
 
     /**

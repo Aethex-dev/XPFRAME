@@ -25,12 +25,12 @@ class InstalledVersions
 private static $installed = array (
   'root' => 
   array (
-    'pretty_version' => '1.0.0+no-version-set',
-    'version' => '1.0.0.0',
+    'pretty_version' => 'dev-main',
+    'version' => 'dev-main',
     'aliases' => 
     array (
     ),
-    'reference' => NULL,
+    'reference' => '7815d0146051f39a1ce75a76f3c04020dbe727d9',
     'name' => 'xenonmc/xpframe',
   ),
   'versions' => 
@@ -67,12 +67,22 @@ private static $installed = array (
     ),
     'xenonmc/xpframe' => 
     array (
-      'pretty_version' => '1.0.0+no-version-set',
-      'version' => '1.0.0.0',
+      'pretty_version' => 'dev-main',
+      'version' => 'dev-main',
       'aliases' => 
       array (
       ),
-      'reference' => NULL,
+      'reference' => '7815d0146051f39a1ce75a76f3c04020dbe727d9',
+    ),
+    'xenonmc/xpframe-mvc' => 
+    array (
+      'pretty_version' => 'dev-main',
+      'version' => 'dev-main',
+      'aliases' => 
+      array (
+        0 => '9999999-dev',
+      ),
+      'reference' => '38c8aaaaeddc0681c517d95a127e3e30f7f4563f',
     ),
     'xenonmc/xpframe-router' => 
     array (

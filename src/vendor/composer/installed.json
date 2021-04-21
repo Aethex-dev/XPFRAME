@@ -234,6 +234,49 @@
             "install-path": "../symfony/yaml"
         },
         {
+            "name": "xenonmc/xpframe-mvc",
+            "version": "dev-main",
+            "version_normalized": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/XENONMC-DEV/XPFRAME-MVC.git",
+                "reference": "38c8aaaaeddc0681c517d95a127e3e30f7f4563f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/XENONMC-DEV/XPFRAME-MVC/zipball/38c8aaaaeddc0681c517d95a127e3e30f7f4563f",
+                "reference": "38c8aaaaeddc0681c517d95a127e3e30f7f4563f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.0.0"
+            },
+            "time": "2021-04-20T02:04:36+00:00",
+            "default-branch": true,
+            "type": "package",
+            "installation-source": "source",
+            "autoload": {
+                "psr-4": {
+                    "XENONMC\\XPFRAME\\Mvc\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "XENONMC",
+                    "email": "support@xenonmc.xyz"
+                }
+            ],
+            "support": {
+                "issues": "https://github.com/XENONMC-DEV/XPFRAME-MVC/issues",
+                "source": "https://github.com/XENONMC-DEV/XPFRAME-MVC/tree/main"
+            },
+            "install-path": "../xenonmc/xpframe-mvc"
+        },
+        {
             "name": "xenonmc/xpframe-router",
             "version": "dev-main",
             "version_normalized": "dev-main",

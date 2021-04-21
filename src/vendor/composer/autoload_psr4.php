@@ -7,6 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'XENONMC\\XPFRAME\\Router\\' => array($vendorDir . '/xenonmc/xpframe-router/src'),
+    'XENONMC\\XPFRAME\\Mvc\\' => array($vendorDir . '/xenonmc/xpframe-mvc/src'),
     'XENONMC\\XPFRAME\\' => array($baseDir . '/'),
     'Symfony\\Polyfill\\Ctype\\' => array($vendorDir . '/symfony/polyfill-ctype'),
     'Symfony\\Component\\Yaml\\' => array($vendorDir . '/symfony/yaml'),

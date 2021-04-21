@@ -15,6 +15,7 @@ class ComposerStaticInitf1ae21eefaf9a6ce7661d1530a876e42
         'X' => 
         array (
             'XENONMC\\XPFRAME\\Router\\' => 23,
+            'XENONMC\\XPFRAME\\Mvc\\' => 20,
             'XENONMC\\XPFRAME\\' => 16,
         ),
         'S' => 
@@ -28,6 +29,10 @@ class ComposerStaticInitf1ae21eefaf9a6ce7661d1530a876e42
         'XENONMC\\XPFRAME\\Router\\' => 
         array (
             0 => __DIR__ . '/..' . '/xenonmc/xpframe-router/src',
+        ),
+        'XENONMC\\XPFRAME\\Mvc\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/xenonmc/xpframe-mvc/src',
         ),
         'XENONMC\\XPFRAME\\' => 
         array (

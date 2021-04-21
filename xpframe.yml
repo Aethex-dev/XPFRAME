@@ -1,7 +1,23 @@
+# allow usage of the command line interface
 use-cli: true
+
+# automatically add the cli prefix in all commands
 cli-auto-prefix: false
+
+# cli command prefix for running framework commands
+cli-prefix: "/xpframe"
+
+# mvc configuration
 mvc:
- contruct:
+
+ # stop all apps if the cli is opened | NOTE: this will not stop apps for other sessions, only your session
+ stop-apps-on-cli-run: true
+
+ # triggers this event in all applications if [ stop-apps-on-cli-run ] is disabled
+ use-on-cli-command-event: true
+
+ # what classes to use
+ classes:
   - Model
   - View
-  - Controller
+  - Controller # IMPORTANT: the [ Controller ] class is required to start and interact with any application properly

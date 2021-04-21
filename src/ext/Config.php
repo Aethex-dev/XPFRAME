@@ -6,7 +6,7 @@
  * XPFRAME and all of its named materials rights belong to XENONMC
  * You may fork and redistribute materials of this framework as long as proper crediting is given, learn more at https://xenonmc.xyz/resources/XENONMC/XPFRAME/copyright
  *
- * @package XENONMC\XPFRAME\cli
+ * @package XENONMC\XPFRAME\ext
  * @author XENONMC <support@xenonmc.xyz>
  * @website https://xenonmc.xyz
  *
@@ -14,26 +14,15 @@
 
 namespace XENONMC\XPFRAME\ext;
 
-// class imports
 use \Symfony\Component\Yaml\Yaml;
 
 class Config
 {
 
     /**
-     * constructor
+     * get a config in yml format
      *
-     */
-
-    public function __construct()
-    {
-
-    }
-
-    /**
-     * get a config
-     *
-     * @param string , location of the config file
+     * @param string $location , location of the config file
      * 
      * @return array|null , full config tree as an array
      * 
