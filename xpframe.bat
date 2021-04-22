@@ -1,3 +1,3 @@
 @echo off
-php src/App.php
+php App.php
 PAUSE

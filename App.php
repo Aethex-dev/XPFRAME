@@ -19,12 +19,8 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-// root constants
-define("ROOT", $_SERVER['DOCUMENT_ROOT']);
-define("SRC", ROOT . "/src");
-
 // run the composer autoloader
-include SRC . "/vendor/autoload.php";
+include "src/vendor/autoload.php";
 
 // class imports
 use \XENONMC\XPFRAME\ext\Config;
