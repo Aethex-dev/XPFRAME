@@ -40,7 +40,7 @@ class CLI
         $this->app = $app;
 
         // notify class start
-        echo "\e[1;92m Interface Started! \e[0m", PHP_EOL;
+        echo "Interface Started!", PHP_EOL;
 
         // start listening for commands
         $this->cmd_listen();
