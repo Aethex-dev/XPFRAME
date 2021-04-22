@@ -9,7 +9,6 @@
  * @package XENONMC\XPFRAME\cli
  * @author XENONMC <support@xenonmc.xyz>
  * @website https://xenonmc.xyz
- *
  */
 
 namespace XENONMC\XPFRAME;
@@ -22,7 +21,6 @@ error_reporting(E_ALL);
 // run the composer autoloader
 include "src/vendor/autoload.php";
 
-// class imports
 use \XENONMC\XPFRAME\ext\Config;
 use \XENONMC\XPFRAME\cli\CLI;
 use XENONMC\XPFRAME\Mvc\Mvc;
@@ -33,35 +31,27 @@ class App
 
     /**
      * router object
-     *
      */
-
     public Router $router;
 
     /**
      * framework config
-     *
      */
-
     public array|null $config;
 
     /**
      * framework main class construct options
-     *
      */
-
     public array $options = array(
 
         'no-prop' => false
     );
 
     /**
-     * constructor
+     * XPFRAME framework start point
      * 
-     * @param array|null , all options for the constructor
-     * 
+     * @param array|null all options for the constructor
      */
-
     public function __construct(array|null $options = null)
     {
 
@@ -83,9 +73,7 @@ class App
 
     /**
      * main logic function
-     *
      */
-
     public function execute()
     {
 
@@ -115,9 +103,7 @@ class App
      * check if the script was started in cli
      *
      * @return boolean , if the script was opened in cli
-     *
      */
-
     public function is_cli(): bool
     {
 
