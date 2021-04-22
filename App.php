@@ -21,8 +21,8 @@ error_reporting(E_ALL);
 // run the composer autoloader
 include "src/vendor/autoload.php";
 
-use \XENONMC\XPFRAME\ext\Config;
-use \XENONMC\XPFRAME\cli\CLI;
+use XENONMC\XPFRAME\ext\Config;
+use XENONMC\XPFRAME\cli\CLI;
 use XENONMC\XPFRAME\Mvc\Mvc;
 use XENONMC\XPFRAME\Router\Router;
 
@@ -43,7 +43,6 @@ class App
      * framework main class construct options
      */
     public array $options = array(
-
         'no-prop' => false
     );
 
@@ -54,12 +53,9 @@ class App
      */
     public function __construct(array|null $options = null)
     {
-
         if ($options == null) {
-
             $options = $this->options;
         } else {
-
             $options = array_merge($options, $this->options);
         }
 
@@ -76,27 +72,26 @@ class App
      */
     public function execute()
     {
-
         // check if script was opened in cli
         if ($this->is_cli()) {
 
             // check if cli is enabled
             if (Config::get("xpframe.yml")['use-cli'] == true) {
-
                 echo 'Starting Command Line Interface...', PHP_EOL;
 
-                // initialize cli class
+                // initialize cli class and stop function
                 new CLI($this);
-
-                // stop function
                 return null;
             }
-
+            
             // stop function
             return null;
         }
 
-        $mvc = new Mvc();
+        $mvc = new Mvc(Config::get("xpframe.yml")["mvc"], function($mvc) {
+            
+            echo $mvc->view->get_rendered_template("test", "evn", false, false);
+        });
     }
 
     /**
@@ -106,29 +101,23 @@ class App
      */
     public function is_cli(): bool
     {
-
         if (defined('STDIN')) {
-
             return true;
         }
 
         if (php_sapi_name() === 'cli') {
-
             return true;
         }
 
         if (array_key_exists('SHELL', $_ENV)) {
-
             return true;
         }
 
         if (empty($_SERVER['REMOTE_ADDR']) and !isset($_SERVER['HTTP_USER_AGENT']) and count($_SERVER['argv']) > 0) {
-
             return true;
         } 
 
         if (!array_key_exists('REQUEST_METHOD', $_SERVER)) {
-
             return true;
         }
 

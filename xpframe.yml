@@ -5,7 +5,7 @@ use-cli: true
 cli-auto-prefix: false
 
 # cli command prefix for running framework commands
-cli-prefix: "/xpframe"
+cli-prefix: "xpframe"
 
 # mvc configuration
 mvc:
@@ -15,9 +15,15 @@ mvc:
 
  # triggers this event in all applications if [ stop-apps-on-cli-run ] is disabled
  use-on-cli-command-event: true
+ 
+ # view templates caching dir
+ v-cache-dir: "internal/cache/views"
+ 
+ # view raw templates dir
+ v-views-dir: "internal/views"
 
  # what classes to use
- classes:
+ use:
   - Model
   - View
   - Controller # IMPORTANT: the [ Controller ] class is required to start and interact with any application properly

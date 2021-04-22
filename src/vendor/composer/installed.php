@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '7815d0146051f39a1ce75a76f3c04020dbe727d9',
+    'reference' => 'a4fdb19694744ac49646d67891b2b8849e712891',
     'name' => 'xenonmc/xpframe',
   ),
   'versions' => 
@@ -31,15 +31,33 @@
       ),
       'reference' => '46cd95797e9df938fdd2b03693b5fca5e64b01ce',
     ),
+    'symfony/polyfill-mbstring' => 
+    array (
+      'pretty_version' => 'dev-main',
+      'version' => 'dev-main',
+      'aliases' => 
+      array (
+        0 => '1.23.x-dev',
+      ),
+      'reference' => '298b87cbbe99cb2c9f88fb1d1de78833b64b483e',
+    ),
     'symfony/yaml' => 
     array (
       'pretty_version' => '5.x-dev',
       'version' => '5.9999999.9999999.9999999-dev',
       'aliases' => 
       array (
-        0 => '9999999-dev',
       ),
       'reference' => '8c98ad27ef5e3136237405b7653fa41498849b6f',
+    ),
+    'twig/twig' => 
+    array (
+      'pretty_version' => '3.x-dev',
+      'version' => '3.9999999.9999999.9999999-dev',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '32d72de1885889452f3d8aa298a90b04d263651b',
     ),
     'xenonmc/xpframe' => 
     array (
@@ -48,7 +66,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '7815d0146051f39a1ce75a76f3c04020dbe727d9',
+      'reference' => 'a4fdb19694744ac49646d67891b2b8849e712891',
     ),
     'xenonmc/xpframe-mvc' => 
     array (
@@ -58,7 +76,7 @@
       array (
         0 => '9999999-dev',
       ),
-      'reference' => '38c8aaaaeddc0681c517d95a127e3e30f7f4563f',
+      'reference' => 'e769404bc26ca81b2d4e353f9bca2f8cdae064e0',
     ),
     'xenonmc/xpframe-router' => 
     array (
@@ -68,7 +86,7 @@
       array (
         0 => '9999999-dev',
       ),
-      'reference' => '8d771be5adf295e7268b853f58d3e8f32b5c21fc',
+      'reference' => 'a8b28b21220fdc5432f5639d51dc5d6729ab1811',
     ),
   ),
 );
