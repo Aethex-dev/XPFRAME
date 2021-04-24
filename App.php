@@ -25,22 +25,33 @@ use XENONMC\XPFRAME\ext\Config;
 use XENONMC\XPFRAME\cli\CLI;
 use XENONMC\XPFRAME\Mvc\Mvc;
 use XENONMC\XPFRAME\Router\Router;
+use XENONMC\XPFRAME\execute;
 
 class App
 {
+    
+    /**
+     * @var Mvc app mvc object
+     */
+    public Mvc $mvc;
+    
+    /**
+     * execute method
+     */
+    use execute;
 
     /**
-     * router object
+     * @var Router app router object
      */
     public Router $router;
 
     /**
-     * framework config
+     * @var array|null framework config
      */
     public array|null $config;
 
     /**
-     * framework main class construct options
+     * @var array framework main class construct options
      */
     public array $options = array(
         'no-prop' => false
@@ -65,33 +76,6 @@ class App
 
         // initialize mvc components
         $this->router = new Router();
-    }
-
-    /**
-     * main logic function
-     */
-    public function execute()
-    {
-        // check if script was opened in cli
-        if ($this->is_cli()) {
-
-            // check if cli is enabled
-            if (Config::get("xpframe.yml")['use-cli'] == true) {
-                echo 'Starting Command Line Interface...', PHP_EOL;
-
-                // initialize cli class and stop function
-                new CLI($this);
-                return null;
-            }
-            
-            // stop function
-            return null;
-        }
-
-        $mvc = new Mvc(Config::get("xpframe.yml")["mvc"], function($mvc) {
-            
-            echo $mvc->view->get_rendered_template("test", "evn", false, false);
-        });
     }
 
     /**
