@@ -25,7 +25,6 @@ use XENONMC\XPFRAME\ext\Config;
 use XENONMC\XPFRAME\cli\CLI;
 use XENONMC\XPFRAME\Mvc\Mvc;
 use XENONMC\XPFRAME\Router\Router;
-use XENONMC\XPFRAME\execute;
 
 class App
 {
@@ -34,11 +33,6 @@ class App
      * @var Mvc app mvc object
      */
     public Mvc $mvc;
-    
-    /**
-     * execute method
-     */
-    use execute;
 
     /**
      * @var Router app router object
@@ -106,6 +100,40 @@ class App
         }
 
         return false;
+    }
+
+    /**
+     * main logic function
+     */
+    public function execute()
+    {
+        // check if script was opened in cli
+        if ($this->is_cli()) {
+
+            // check if cli is enabled
+            if (Config::get("xpframe.yml")['use-cli'] == true) {
+                echo 'Starting Command Line Interface...', PHP_EOL;
+
+                // initialize cli class and stop function
+                new CLI($this);
+                return null;
+            }
+
+            // stop function
+            return null;
+        }
+
+        $this->mvc = new Mvc(Config::get("xpframe.yml")["mvc"]);
+
+        $router = $this->router;
+
+        $router->on_get(["App.php", "page", "{beans}"], 200, function($beans) {
+            echo "Welcome to <strong>/Test</strong>" . " Found param: $beans";
+        });
+
+        $router->on_get(["{beans}"], 200, function($beans) {
+            echo "Welcome to <strong>/Test</strong>" . " Found param: $beans";
+        });
     }
 }
 
