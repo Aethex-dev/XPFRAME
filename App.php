@@ -127,12 +127,8 @@ class App
 
         $router = $this->router;
 
-        $router->on_get(["App.php", "page", "{beans}"], 200, function($beans) {
-            echo "Welcome to <strong>/Test</strong>" . " Found param: $beans";
-        });
-
-        $router->on_get(["{beans}"], 200, function($beans) {
-            echo "Welcome to <strong>/Test</strong>" . " Found param: $beans";
+        $router->on_get([], 200, function() {
+            echo "Welcome to the homepage of this website. url: /";
         });
     }
 }
