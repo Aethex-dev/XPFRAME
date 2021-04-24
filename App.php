@@ -28,7 +28,7 @@ use XENONMC\XPFRAME\Router\Router;
 
 class App
 {
-    
+
     /**
      * @var Mvc app mvc object
      */
@@ -53,7 +53,7 @@ class App
 
     /**
      * XPFRAME framework start point
-     * 
+     *
      * @param array|null all options for the constructor
      */
     public function __construct(array|null $options = null)
@@ -93,7 +93,7 @@ class App
 
         if (empty($_SERVER['REMOTE_ADDR']) and !isset($_SERVER['HTTP_USER_AGENT']) and count($_SERVER['argv']) > 0) {
             return true;
-        } 
+        }
 
         if (!array_key_exists('REQUEST_METHOD', $_SERVER)) {
             return true;
@@ -127,8 +127,9 @@ class App
 
         $router = $this->router;
 
-        $router->on_get([], 200, function() {
-            echo "Welcome to the homepage of this website. url: /";
+        $router->on_get(["page", "{page_name}"], 200, function($page_name) {
+            $this->mvc->view->render($page_name, "main", "theme",false);
+            exit();
         });
     }
 }
