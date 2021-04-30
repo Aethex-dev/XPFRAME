@@ -12,15 +12,10 @@
  */
 
 namespace XENONMC\XPFRAME;
-
-// enable error reporting
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
-
-// run the composer autoloader
 include "src/vendor/autoload.php";
-
 use XENONMC\XPFRAME\ext\Config;
 use XENONMC\XPFRAME\cli\CLI;
 use XENONMC\XPFRAME\Mvc\Mvc;
@@ -127,9 +122,11 @@ class App
 
         $router = $this->router;
 
-        $router->on_get(["page", "{page_name}"], 200, function($page_name) {
+        $router->on_get(["page"], true, true, function() {
+            echo "No param found";
+        });
+        $router->on_get(["page", "{page_name}"], true, true, function($page_name) {
             $this->mvc->view->render($page_name, "main", "theme",false);
-            exit();
         });
     }
 }

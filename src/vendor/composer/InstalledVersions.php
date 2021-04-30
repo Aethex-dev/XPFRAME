@@ -30,7 +30,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => 'a4fdb19694744ac49646d67891b2b8849e712891',
+    'reference' => 'a2f1043cc2c3a2a26a12505d043269a64940a5ce',
     'name' => 'xenonmc/xpframe',
   ),
   'versions' => 
@@ -63,7 +63,7 @@ private static $installed = array (
       array (
         0 => '1.23.x-dev',
       ),
-      'reference' => '298b87cbbe99cb2c9f88fb1d1de78833b64b483e',
+      'reference' => '9ad2f3c9de0273812c616fdf96070a129c3defcb',
     ),
     'symfony/yaml' => 
     array (
@@ -71,8 +71,9 @@ private static $installed = array (
       'version' => '5.9999999.9999999.9999999-dev',
       'aliases' => 
       array (
+        0 => '9999999-dev',
       ),
-      'reference' => '8c98ad27ef5e3136237405b7653fa41498849b6f',
+      'reference' => 'afe64a9ce7718524116c9a3b0913e5163b49c405',
     ),
     'twig/twig' => 
     array (
@@ -80,6 +81,7 @@ private static $installed = array (
       'version' => '3.9999999.9999999.9999999-dev',
       'aliases' => 
       array (
+        0 => '9999999-dev',
       ),
       'reference' => '32d72de1885889452f3d8aa298a90b04d263651b',
     ),
@@ -90,7 +92,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => 'a4fdb19694744ac49646d67891b2b8849e712891',
+      'reference' => 'a2f1043cc2c3a2a26a12505d043269a64940a5ce',
     ),
     'xenonmc/xpframe-mvc' => 
     array (
@@ -100,7 +102,7 @@ private static $installed = array (
       array (
         0 => '9999999-dev',
       ),
-      'reference' => 'e769404bc26ca81b2d4e353f9bca2f8cdae064e0',
+      'reference' => 'd1f245dbf3aeb5f9d443dacf924323338dad56dc',
     ),
     'xenonmc/xpframe-router' => 
     array (
@@ -110,7 +112,7 @@ private static $installed = array (
       array (
         0 => '9999999-dev',
       ),
-      'reference' => 'a8b28b21220fdc5432f5639d51dc5d6729ab1811',
+      'reference' => 'd64145a7de631c59b27f25105b518cacc0a4aa17',
     ),
   ),
 );
@@ -335,6 +337,7 @@ self::$canGetVendors = method_exists('Composer\Autoload\ClassLoader', 'getRegist
 $installed = array();
 
 if (self::$canGetVendors) {
+
 foreach (ClassLoader::getRegisteredLoaders() as $vendorDir => $loader) {
 if (isset(self::$installedByVendor[$vendorDir])) {
 $installed[] = self::$installedByVendor[$vendorDir];
