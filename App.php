@@ -16,10 +16,12 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 include "src/vendor/autoload.php";
-use XENONMC\XPFRAME\ext\Config;
+
+use Exception;
 use XENONMC\XPFRAME\cli\CLI;
-use XENONMC\XPFRAME\Mvc\Mvc;
-use XENONMC\XPFRAME\Router\Router;
+use XENONMC\XPFRAME\ext\Config;
+use XENONMC\XPFRAME\vendor\Mvc\Mvc;
+use XENONMC\XPFRAME\vendor\Router\Router;
 
 class App
 {
@@ -58,9 +60,7 @@ class App
         } else {
             $options = array_merge($options, $this->options);
         }
-
         echo $options['no-prop'];
-
         $this->config = Config::get('xpframe.yml');
 
         // initialize mvc components
@@ -77,34 +77,29 @@ class App
         if (defined('STDIN')) {
             return true;
         }
-
         if (php_sapi_name() === 'cli') {
             return true;
         }
-
         if (array_key_exists('SHELL', $_ENV)) {
             return true;
         }
-
         if (empty($_SERVER['REMOTE_ADDR']) and !isset($_SERVER['HTTP_USER_AGENT']) and count($_SERVER['argv']) > 0) {
             return true;
         }
-
         if (!array_key_exists('REQUEST_METHOD', $_SERVER)) {
             return true;
         }
-
         return false;
     }
 
     /**
      * main logic function
+     * @throws Exception
      */
     public function execute()
     {
         // check if script was opened in cli
         if ($this->is_cli()) {
-
             // check if cli is enabled
             if (Config::get("xpframe.yml")['use-cli'] == true) {
                 echo 'Starting Command Line Interface...', PHP_EOL;
@@ -117,16 +112,14 @@ class App
             // stop function
             return null;
         }
-
         $this->mvc = new Mvc(Config::get("xpframe.yml")["mvc"]);
-
         $router = $this->router;
-
         $router->on_get(["page"], true, true, function() {
             echo "No param found";
         });
         $router->on_get(["page", "{page_name}"], true, true, function($page_name) {
-            $this->mvc->view->render($page_name, "main", "theme",false);
+            $this->mvc->view->render($page_name, "main", "theme",true);
+            $this->mvc->controller->start("test");
         });
     }
 }
@@ -135,4 +128,8 @@ class App
 $xpframe = new App();
 
 // run the app class
-$xpframe->execute();
+try {
+    $xpframe->execute();
+} catch (Exception $e) {
+    echo $e;
+}

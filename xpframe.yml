@@ -9,18 +9,15 @@ cli-prefix: "xpframe"
 
 # mvc configuration
 mvc:
-
- # stop all apps if the cli is opened | NOTE: this will not stop apps for other sessions, only your session
- stop-apps-on-cli-run: true
-
- # triggers this event in all applications if [ stop-apps-on-cli-run ] is disabled
- use-on-cli-command-event: true
  
  # view templates caching dir
  v-cache-dir: "internal/cache/views"
  
  # view raw templates dir
  v-views-dir: "internal/views"
+
+ # controller apps dir
+ c-apps-dir: "src/apps"
 
  # what classes to use
  use:
