@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => 'a2f1043cc2c3a2a26a12505d043269a64940a5ce',
+    'reference' => 'f267ad84fdbb3af62ae50458353d84eb490a49b7',
     'name' => 'xenonmc/xpframe',
   ),
   'versions' => 
@@ -49,7 +49,7 @@
       array (
         0 => '9999999-dev',
       ),
-      'reference' => 'afe64a9ce7718524116c9a3b0913e5163b49c405',
+      'reference' => '23cdfa5e7cf0c752bffa2e5dd5b11cb90c367507',
     ),
     'twig/twig' => 
     array (
@@ -68,7 +68,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => 'a2f1043cc2c3a2a26a12505d043269a64940a5ce',
+      'reference' => 'f267ad84fdbb3af62ae50458353d84eb490a49b7',
     ),
     'xenonmc/xpframe-mvc' => 
     array (
@@ -78,7 +78,7 @@
       array (
         0 => '9999999-dev',
       ),
-      'reference' => 'd1f245dbf3aeb5f9d443dacf924323338dad56dc',
+      'reference' => '8947bdc7999328323a4257f0af7421241f3fb924',
     ),
     'xenonmc/xpframe-router' => 
     array (
@@ -88,7 +88,7 @@
       array (
         0 => '9999999-dev',
       ),
-      'reference' => 'd64145a7de631c59b27f25105b518cacc0a4aa17',
+      'reference' => '9b4e04741b05b2f9328dda8523057406b27919c7',
     ),
   ),
 );

@@ -15,8 +15,8 @@ class ComposerStaticInitfdb22f79a4eb57e60ee10c1d68beadb5
     public static $prefixLengthsPsr4 = array (
         'X' => 
         array (
-            'XENONMC\\XPFRAME\\Router\\' => 23,
-            'XENONMC\\XPFRAME\\Mvc\\' => 20,
+            'XENONMC\\XPFRAME\\vendor\\Router\\' => 30,
+            'XENONMC\\XPFRAME\\vendor\\Mvc\\' => 27,
             'XENONMC\\XPFRAME\\' => 16,
         ),
         'T' => 
@@ -32,11 +32,11 @@ class ComposerStaticInitfdb22f79a4eb57e60ee10c1d68beadb5
     );
 
     public static $prefixDirsPsr4 = array (
-        'XENONMC\\XPFRAME\\Router\\' => 
+        'XENONMC\\XPFRAME\\vendor\\Router\\' => 
         array (
             0 => __DIR__ . '/..' . '/xenonmc/xpframe-router/src',
         ),
-        'XENONMC\\XPFRAME\\Mvc\\' => 
+        'XENONMC\\XPFRAME\\vendor\\Mvc\\' => 
         array (
             0 => __DIR__ . '/..' . '/xenonmc/xpframe-mvc/src',
         ),

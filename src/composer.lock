@@ -241,12 +241,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "afe64a9ce7718524116c9a3b0913e5163b49c405"
+                "reference": "23cdfa5e7cf0c752bffa2e5dd5b11cb90c367507"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/afe64a9ce7718524116c9a3b0913e5163b49c405",
-                "reference": "afe64a9ce7718524116c9a3b0913e5163b49c405",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/23cdfa5e7cf0c752bffa2e5dd5b11cb90c367507",
+                "reference": "23cdfa5e7cf0c752bffa2e5dd5b11cb90c367507",
                 "shasum": ""
             },
             "require": {
@@ -309,7 +309,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-04-23T16:57:12+00:00"
+            "time": "2021-04-29T20:52:27+00:00"
         },
         {
             "name": "twig/twig",
@@ -394,12 +394,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/XENONMC-DEV/XPFRAME-MVC.git",
-                "reference": "d1f245dbf3aeb5f9d443dacf924323338dad56dc"
+                "reference": "8947bdc7999328323a4257f0af7421241f3fb924"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/XENONMC-DEV/XPFRAME-MVC/zipball/d1f245dbf3aeb5f9d443dacf924323338dad56dc",
-                "reference": "d1f245dbf3aeb5f9d443dacf924323338dad56dc",
+                "url": "https://api.github.com/repos/XENONMC-DEV/XPFRAME-MVC/zipball/8947bdc7999328323a4257f0af7421241f3fb924",
+                "reference": "8947bdc7999328323a4257f0af7421241f3fb924",
                 "shasum": ""
             },
             "require": {
@@ -409,7 +409,7 @@
             "type": "package",
             "autoload": {
                 "psr-4": {
-                    "XENONMC\\XPFRAME\\Mvc\\": "src/"
+                    "XENONMC\\XPFRAME\\vendor\\Mvc\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -426,7 +426,7 @@
                 "issues": "https://github.com/XENONMC-DEV/XPFRAME-MVC/issues",
                 "source": "https://github.com/XENONMC-DEV/XPFRAME-MVC/tree/main"
             },
-            "time": "2021-04-25T03:07:42+00:00"
+            "time": "2021-05-01T00:45:56+00:00"
         },
         {
             "name": "xenonmc/xpframe-router",
@@ -434,12 +434,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/XENONMC-DEV/XPFRAME-ROUTER.git",
-                "reference": "d64145a7de631c59b27f25105b518cacc0a4aa17"
+                "reference": "9b4e04741b05b2f9328dda8523057406b27919c7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/XENONMC-DEV/XPFRAME-ROUTER/zipball/d64145a7de631c59b27f25105b518cacc0a4aa17",
-                "reference": "d64145a7de631c59b27f25105b518cacc0a4aa17",
+                "url": "https://api.github.com/repos/XENONMC-DEV/XPFRAME-ROUTER/zipball/9b4e04741b05b2f9328dda8523057406b27919c7",
+                "reference": "9b4e04741b05b2f9328dda8523057406b27919c7",
                 "shasum": ""
             },
             "require": {
@@ -449,7 +449,7 @@
             "type": "package",
             "autoload": {
                 "psr-4": {
-                    "XENONMC\\XPFRAME\\Router\\": "src/"
+                    "XENONMC\\XPFRAME\\vendor\\Router\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -466,7 +466,7 @@
                 "issues": "https://github.com/XENONMC-DEV/XPFRAME-ROUTER/issues",
                 "source": "https://github.com/XENONMC-DEV/XPFRAME-ROUTER/tree/main"
             },
-            "time": "2021-04-25T00:06:55+00:00"
+            "time": "2021-05-01T00:45:54+00:00"
         }
     ],
     "packages-dev": [],
