@@ -15,15 +15,7 @@ class WebSocketsHandle
     public function __construct()
     {
         // Start the server
-        $this->server = IoServer::factory(
-            new HttpServer(
-                new WsServer(
-                    new WebSockets()
-                )
-            ),
-            2000
-        );
-
+        $this->server = IoServer::factory(new HttpServer(new WsServer(new WebSockets())), 2000);
         $this->server->run();
     }
 }

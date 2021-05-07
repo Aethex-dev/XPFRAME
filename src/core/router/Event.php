@@ -24,8 +24,7 @@ class Event
         $request_url_count = count($request_url);
         if ($request_url[$request_url_count - 1] == "" && $request_url_count > 2) {
             unset($request_url[$request_url_count - 1]);
-        }]
-        \
+        }
         array_shift($request_url);
 
         // Loop through all URL segments and match
