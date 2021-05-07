@@ -34,6 +34,15 @@ class Main implements App
 
         // Router
         $router = new Router();
+        $model->database->add("main", $model->database->new("sql", [
+            "hostname" => "localhost",
+            "username" => "root",
+            "password" => "", 
+            "database" => ""
+        ]));
+
+        $result = $model->database->databases[0]["main"]["connection"]->query("SHOW DATABASES");
+        var_dump($result);
 
         // Home page route
         $router->event->get("", function () use (&$controller) {

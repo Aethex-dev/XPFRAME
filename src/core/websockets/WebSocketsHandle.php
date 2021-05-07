@@ -10,7 +10,7 @@ use xenonmc\xpframe\core\websockets\WebSockets;
 class WebSocketsHandle
 {
     /**
-     * WebSockets class for controlling and managing WebSockets input and running its server
+     * WebSocketsHandle class used for starting ans stopping the WebSockets server
      */
     public function __construct()
     {
