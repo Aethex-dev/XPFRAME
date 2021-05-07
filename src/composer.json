@@ -1,8 +1,8 @@
 {
     "name": "xenonmc/xpframe",
+    "description": "PHP MVC Framework by XENONMC",
     "type": "project",
     "license": "MIT",
-    "description": "",
     "authors": [
         {
             "name": "XENONMC",
@@ -11,14 +11,12 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "symfony/yaml": "5.x-dev",
-        "xenonmc/xpframe-router": "dev-main",
-        "xenonmc/xpframe-mvc": "dev-main",
-        "twig/twig": "3.x-dev"
+        "twig/twig": "3.x-dev",
+        "cboden/ratchet": "dev-master"
     },
     "autoload": {
         "psr-4": {
-            "XENONMC\\XPFRAME\\": ""
+            "xenonmc\\xpframe\\": ""
         }
     }
 }

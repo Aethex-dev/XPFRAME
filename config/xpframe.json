@@ -1,0 +1,9 @@
+{
+    "mvc": {
+        "use": {
+            "Model": true,
+            "View": true,
+            "Controller": true
+        }
+    }
+}

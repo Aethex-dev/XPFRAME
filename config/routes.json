@@ -1,0 +1,14 @@
+{
+    "contact": {
+        "app": "contact",
+        "controller": "Main"
+    },
+    "contact/send": {
+        "app": "contact",
+        "controller": "Send"
+    },
+    "test": {
+        "app": "table",
+        "controller": "Main"
+    }
+}
