@@ -33,36 +33,18 @@ class Main implements App
 
         // Router
         $router = new Router();
-        $model->database->add("main", $model->database->new("sql", [
-            "hostname" => "localhost",
-            "username" => "root",
-            "password" => "helloworld", 
-            "database" => "xenonmc"
-        ]));
-        $xenonmc_db = $model->database->get("main");
-        $sq = $xenonmc_db->query->select(["*"])->from("discord")->limit("900")->run();
-        while ($row = $sq->fetch_assoc()) {
-            echo $row["tag"];
-        }
         
         // Home page route
         $router->on("get", "page", function () {
             echo "yoyoyoyo";
         });
-
-        $router->handle_events();
-
-        // 404 route
-        $router->event->none(function () use (&$view) {
-            $view->render("Default", "404", "Main", false, [
-                "template" => [
-
-                ],
-                "layout" => [
-
-                ]
-            ]);
+        $router->on("get", "", function () {
+            
         });
+        $router->on("404", "", function () {
+            echo "404";
+        });
+        $router->handle_events();
     }
 }
 

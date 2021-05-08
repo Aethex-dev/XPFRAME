@@ -9,7 +9,12 @@ class Router
     /**
      * @var Event Event class object
      */
-    public Event $event;
+    private Event $event;
+
+    /**
+     * @var bool Event triggered
+     */
+    public bool $event_triggered;
 
     /**
      * @var array All registered events
@@ -27,11 +32,12 @@ class Router
     public function __construct()
     {
         // Initialize Router components
-        $this->event = new Event();
+        $this->event = new Event($this);
         $this->header = new Header();
 
         // Initialize variables
         $this->events = [];
+        $this->event_triggered = false;
     }
 
     /**
@@ -64,13 +70,19 @@ class Router
             // get requests
             switch (strtolower($event["event"])) {
                 case "get":
-                    $this->event->get($event["url"], $event["callback"]);
+                    $this->event->get($event["url"], function () use (&$event) {
+                        $this->event_triggered = true;
+                        $event["callback"]();
+                    });
                     break;
                 case "post":
-                    $this->event->post($event["url"], $event["callback"]);
+                    $this->event->post($event["url"], function () use (&$event) {
+                        $this->event_triggered = true;
+                        $event["callback"]();
+                    });
                     break;
                 case "404":
-                    $this->event->none($event["url"], $event["callback"]);
+                    $this->event->none($event["callback"]);
                     break;
             }
         }

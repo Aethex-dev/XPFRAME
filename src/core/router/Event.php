@@ -3,12 +3,24 @@
 
 namespace xenonmc\xpframe\core\router;
 
+use xenonmc\xpframe\core\router\Router;
+
 class Event
 {
+
     /**
-     * @var string Triggered URL
+     * @var Router Router object`
      */
-    public string $triggered_url;
+    public Router $router;
+
+    /**
+     * Event handler container for router
+     */
+    public function __construct(Router $router)
+    {
+        // Define parent class
+        $this->router = $router;
+    }
 
     /**
      * On get request event
@@ -56,7 +68,6 @@ class Event
                 // Check if enough matches are ready to call the event
                 if ($url_required_matches == $url_current_matches) {
                     $callback(...$callback_params);
-                    $this->triggered_url = implode("/", $request_url);
                     break;
                 }
             }
@@ -88,7 +99,7 @@ class Event
     public function none(callable $callback)
     {
         // Check if event should trigger
-        if (!isset($this->triggered_url)) {
+        if ($this->router->event_triggered == false) {
             $callback();
         }
     }
