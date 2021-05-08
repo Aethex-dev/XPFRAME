@@ -47,7 +47,7 @@ class Database
                 return new Connection($type, $connection);
                 break;
             default: 
-                throw new Exception("Invalid database type");
+                throw new Exception("Invalid or unsupported database type: [ " . $type . " ]");
                 break;
         }
     }
@@ -55,16 +55,64 @@ class Database
     /**
      * Add database to database selection
      * 
-     * @param string $id Identifier for database
+     * @param string $name Identifier for database
      * @param Connection $connection Database connection object
      */
-    public function add(string $id, Connection $connection)
+    public function add(string $name, Connection $connection)
     {
         // Add database with key to databases array
         array_push($this->databases, [
-            $id => [
+            $name => [
             "type" => $connection->type,
             "connection" => $connection->connection
         ]]);
+    }
+
+    /**
+     * Get a stored database connection object
+     * 
+     * @param string $database Name of the database
+     */
+    public function get_connection(string $database): mixed
+    {
+        // Check if database exists in memory
+        if (array_key_exists($database, $this->databases[0])) {
+            return $this->databases[0][$database]["connection"];
+        }
+        
+        // Throw error for non existing database
+        throw new Exception("The database [ " . $database . " ] does not exist in database memory");
+    }
+
+    /**
+     * Get a stored database type value
+     * 
+     * @param string $database Name of the database
+     */
+    public function get_type(string $database): mixed
+    {
+        // Check if database exists in memory
+        if (array_key_exists($database, $this->databases[0])) {
+            return $this->databases[0][$database]["type"];
+        }
+        
+        // Throw error for non existing database
+        throw new Exception("The database [ " . $database . " ] does not exist in database memory");
+    }
+
+    /**
+     * Get a stored database object
+     * 
+     * @param string $database Name of the database
+     */
+    public function get(string $database): mixed
+    {
+        // Check if database exists in memory
+        if (array_key_exists($database, $this->databases[0])) {
+            return new Connection($this->databases[0][$database]["type"], $this->databases[0][$database]["connection"]);
+        }
+        
+        // Throw error for non existing database
+        throw new Exception("The database [ " . $database . " ] does not exist in database memory");
     }
 }

@@ -27,12 +27,12 @@ class InstalledVersions
 private static $installed = array (
   'root' => 
   array (
-    'pretty_version' => '1.0.0+no-version-set',
-    'version' => '1.0.0.0',
+    'pretty_version' => 'dev-main',
+    'version' => 'dev-main',
     'aliases' => 
     array (
     ),
-    'reference' => NULL,
+    'reference' => '4d2fb5a214560046a52c1233de34989669d4f1d5',
     'name' => 'xenonmc/xpframe',
   ),
   'versions' => 
@@ -232,12 +232,12 @@ private static $installed = array (
     ),
     'xenonmc/xpframe' => 
     array (
-      'pretty_version' => '1.0.0+no-version-set',
-      'version' => '1.0.0.0',
+      'pretty_version' => 'dev-main',
+      'version' => 'dev-main',
       'aliases' => 
       array (
       ),
-      'reference' => NULL,
+      'reference' => '4d2fb5a214560046a52c1233de34989669d4f1d5',
     ),
   ),
 );

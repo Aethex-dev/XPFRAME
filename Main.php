@@ -3,7 +3,6 @@
 namespace xenonmc\xpframe;
 
 use xenonmc\xpframe\core\app\App;
-use xenonmc\xpframe\core\cli\CLI;
 use xenonmc\xpframe\core\mvc\MVC;
 use xenonmc\xpframe\core\router\Router;
 
@@ -37,17 +36,21 @@ class Main implements App
         $model->database->add("main", $model->database->new("sql", [
             "hostname" => "localhost",
             "username" => "root",
-            "password" => "", 
-            "database" => ""
+            "password" => "helloworld", 
+            "database" => "xenonmc"
         ]));
-
-        $result = $model->database->databases[0]["main"]["connection"]->query("SHOW DATABASES");
-        var_dump($result);
-
+        $xenonmc_db = $model->database->get("main");
+        $sq = $xenonmc_db->query->select(["*"])->from("discord")->limit("900")->run();
+        while ($row = $sq->fetch_assoc()) {
+            echo $row["tag"];
+        }
+        
         // Home page route
-        $router->event->get("", function () use (&$controller) {
-            $controller->get_app("home", "Main")->start($controller->mvc);
+        $router->on("get", "page", function () {
+            echo "yoyoyoyo";
         });
+
+        $router->handle_events();
 
         // 404 route
         $router->event->none(function () use (&$view) {

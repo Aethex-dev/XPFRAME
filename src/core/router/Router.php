@@ -12,6 +12,11 @@ class Router
     public Event $event;
 
     /**
+     * @var array All registered events
+     */
+    public array $events;
+
+    /**
      * @var Header Http header control object
      */
     public Header $header;
@@ -24,5 +29,50 @@ class Router
         // Initialize Router components
         $this->event = new Event();
         $this->header = new Header();
+
+        // Initialize variables
+        $this->events = [];
+    }
+
+    /**
+     * On event handler
+     * 
+     * @param string $event Event name
+     * @param string $param Event param
+     * @param callable $callback Event callback
+     */
+    public function on(string $event, string $param, callable $callback)
+    {
+        // Register event to events
+        $this->events[count($this->events)] = [
+            "url" => $param,
+            "callback" => $callback,
+            "event" => $event
+        ];
+    }
+
+    /**
+     * Handle all events
+     */
+    public function handle_events()
+    {
+        // Get all events
+        $events = $this->events;
+
+        // Loop through all events
+        foreach ($events as $event) {
+            // get requests
+            switch (strtolower($event["event"])) {
+                case "get":
+                    $this->event->get($event["url"], $event["callback"]);
+                    break;
+                case "post":
+                    $this->event->post($event["url"], $event["callback"]);
+                    break;
+                case "404":
+                    $this->event->none($event["url"], $event["callback"]);
+                    break;
+            }
+        }
     }
 }

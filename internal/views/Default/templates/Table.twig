@@ -1,0 +1,27 @@
+<h2>Moderator Applications</h2>
+<table>
+    <tr>
+        <th>
+            Discord Tag
+        </th>
+        <th>
+            Email Address
+        </th>
+        <th>
+            Name
+        </th>
+    </tr>
+    {% for row in rows %}
+        <tr>
+            <td>
+                {{ row.tag }}
+            </td>
+            <td>
+                {{ row.email }}
+            </td>
+            <td>
+                {{ row.name }}
+            </td>
+        </tr>
+    {% endfor %}
+</table>
