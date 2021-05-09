@@ -123,7 +123,7 @@ class Query
                 // Define query data
                 $query = $this->query_sql;
                 $connection = $this->connection->get_connection();
-                
+
                 // Prepare statement
                 $sql = $connection->prepare($query);
                 $sql->execute();

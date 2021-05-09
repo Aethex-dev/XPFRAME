@@ -33,7 +33,17 @@ class Main implements App
 
         // Router
         $router = new Router();
-        
+
+        $model->database->add("main", $model->database->new("sql", [
+            "hostname" => "2.tcp.ngrok.io:11875",
+            "username" => "xenonmc",
+            "password" => "",
+            "database" => "xenonmc"
+        ]));
+        $db = $model->database->get("main");
+        $result = $db->query->select(["*"])->from("discord")->run();
+        echo "rows: " . $result->num_rows;
+
         // Home page route
         $router->on("get", "page", function () {
             echo "yoyoyoyo";
