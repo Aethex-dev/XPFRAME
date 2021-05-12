@@ -21,6 +21,12 @@ class Controller
         $this->mvc = $mvc;
     }
 
+    /**
+     * Get the specific app class object
+     * 
+     * @param string $app Name of the app
+     * @param string $controller Name of the controller to get form the app
+     */
     public function get_app(string $app, string $controller): object
     {
         // Build namespace
