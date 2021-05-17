@@ -154,10 +154,10 @@ class Main implements App
                     $row = $res->fetch_assoc();
                 }
             
-            if ($res->num_rows > 0) {
-                setcookie("tkey", $row["tkey"]);
-                setcookie("token", $row["token"]);
-            }
+                if ($res->num_rows > 0) {
+                    setcookie("tkey", $row["tkey"]);
+                    setcookie("token", $row["token"]);
+                }
             }
             
             // Render the page
